@@ -16,8 +16,8 @@ public class playerlist {
     public void show() {
         // Создание окна
         playerList = new JFrame("Player list");
-        playerList.setSize(500, 300);
-        playerList.setLocation(100, 100);
+        playerList.setSize(600, 400);
+        playerList.setLocation(1200, 200);
         playerList.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Создание кнопок и прикрепление иконок
@@ -44,9 +44,9 @@ public class playerlist {
         playerList.add(toolBar, BorderLayout.NORTH);
 
         // Создание таблицы с данными
-        String [] columns = {"Player", "Player number", "Player position"};
-        String [][] data = {{"Marquinhos", "5", "Defender"},
-                {"Donnarumma", "1", "Goalkeeper"}};
+        String [] columns = {"Player", "Player number", "Player position", "Country"};
+        String [][] data = {{"Marquinhos", "5", "Defender", "Brazil"},
+                {"Donnarumma", "1", "Goalkeeper", "Italy"}};
         model=  new DefaultTableModel(data, columns);
         players = new JTable(model);
         scroll = new JScrollPane(players);
